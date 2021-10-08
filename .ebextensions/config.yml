@@ -1,4 +1,3 @@
-packages:
-  yum:
-    yarn: []
-
+commands:
+  01_install_yarn:
+    command: npm install yarn -g
