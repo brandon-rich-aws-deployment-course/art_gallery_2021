@@ -1,9 +1,11 @@
+require 'socket'
 class AlbumsController < ApplicationController
   before_action :set_album, only: %i[ show edit update destroy ]
 
   # GET /albums or /albums.json
   def index
     @albums = Album.all
+    @hostname = Socket.gethostname
   end
 
   # GET /albums/1 or /albums/1.json
