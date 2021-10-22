@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Album title:</strong>
+  <%= @album.album_title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @album.artist %>
+</p>
+
+<p>
+  <strong>Year released:</strong>
+  <%= @album.year_released %>
+</p>
+
+<p>
+  <strong>Cover image url:</strong>
+  <%= @album.cover_image_url %>
+</p>
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  album_title: MyString
+  artist: MyString
+  year_released: MyString
+  cover_image_url: MyString
+
+two:
+  album_title: MyString
+  artist: MyString
+  year_released: MyString
+  cover_image_url: MyString
