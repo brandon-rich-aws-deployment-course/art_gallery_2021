@@ -2,6 +2,7 @@
 . /home/ec2-user/.bashrc
 export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin
 cd /opt/current-deployment
+echo "BMR DEBUG POINT"
 export RDS_PORT=5432
 export RDS_DB_NAME="postgres"
 export RDS_PASSWORD=$(aws ssm get-parameters --region us-east-1 --names CodeDeployPostgresPassword --with-decryption --query Parameters[0].Value)
