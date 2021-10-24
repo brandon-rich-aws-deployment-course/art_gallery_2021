@@ -12,13 +12,14 @@ echo "BMR PRINT ENV"
 env
 echo "BMR DONE PRINT ENV"
 
-# need node and yarn
-rails assets:precompile
-
 export SECRET_KEY_BASE=$(bundle exec rake secret)
 
 bundle config build.nokogiri --use-system-libraries
 bundle
+
+# need node and yarn
+rails assets:precompile
+
 bundle exec rake db:migrate
 #bundle exec unicorn -E development -c /opt/current-deployment/config/unicorn.rb -D
 bundle exec rails s -d
