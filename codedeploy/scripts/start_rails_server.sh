@@ -12,6 +12,10 @@ echo "BMR PRINT ENV"
 env
 echo "BMR DONE PRINT ENV"
 
+echo "BMR WHICH YARN2"
+echo $(which yarn)
+echo "BMR DONE"
+
 export SECRET_KEY_BASE=$(bundle exec rake secret)
 
 bundle config build.nokogiri --use-system-libraries
