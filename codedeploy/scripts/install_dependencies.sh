@@ -18,3 +18,6 @@ nvm install 14.18.1
 
 #install yarn
 npm install yarn -g
+
+# symlink it so it's in the PATH
+ln -s -f "$(npm bin --global)"/yarn /usr/bin/yarn
