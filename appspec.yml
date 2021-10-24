@@ -11,6 +11,7 @@ hooks:
       runas: root 
     - location: codedeploy/scripts/configure_nginx.sh
     - location: codedeploy/scripts/install_dependencies.sh
+    - location: codedeploy/scripts/set_environment_variables.sh
   AfterInstall:
     - location: codedeploy/scripts/start_rails_server.sh
       runas: root 
