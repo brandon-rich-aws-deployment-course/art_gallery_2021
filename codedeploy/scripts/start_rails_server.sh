@@ -11,6 +11,7 @@ export RDS_HOSTNAME=$(aws ssm get-parameters --region us-east-1 --names CodeDepl
 echo "BMR PRINT ENV"
 env
 echo "BMR DONE PRINT ENV"
+rails assets:precompile
 bundle config build.nokogiri --use-system-libraries
 bundle
 bundle exec rake db:migrate
