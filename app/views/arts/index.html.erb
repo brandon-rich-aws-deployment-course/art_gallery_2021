@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Art Gallery</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Artist</th>
+      <th>Year</th>
+      <th>Image url</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arts.each do |art| %>
+      <tr>
+        <td><%= art.title %></td>
+        <td><%= art.description %></td>
+        <td><%= art.artist %></td>
+        <td><%= art.year %></td>
+        <td><%= link_to image_tag(art.image_url, width:"100px"), art %></td>
+        <td><%= link_to 'Show', art %><br/>
+        <%= link_to 'Edit', edit_art_path(art) %><br/>
+        <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= button_to  'New Art', new_art_path %>
+<br/>
+
