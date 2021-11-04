@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: codedeploy/config/ruby-codedeploy-demo-nginx.conf
+    destination: /etc/nginx/conf.d
+  - source: codedeploy/config/nginx.conf
+    destination: /etc/nginx
+hooks:
+  BeforeInstall:
+    - location: codedeploy/scripts/stop_rails_server.sh
+      runas: root 
+    - location: codedeploy/scripts/configure_nginx.sh
+    - location: codedeploy/scripts/install_dependencies.sh
+  AfterInstall:
+    - location: codedeploy/scripts/start_rails_server.sh
+      runas: root 
+    - location: codedeploy/scripts/start_nginx.sh
+      runas: root 

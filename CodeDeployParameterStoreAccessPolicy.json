@@ -1,0 +1,28 @@
+{
+     "Version": "2012-10-17",
+     "Statement": [
+         {
+             "Effect": "Allow",
+             "Action": [
+                 "ssm:DescribeParameters"
+             ],
+             "Resource": "*"
+         },
+         {
+             "Effect": "Allow",
+             "Action": [
+                 "ssm:GetParameters"
+             ],
+             "Resource": [
+                 "arn:aws:ssm:us-east-1:337078722066:parameter/CodeDeploy*"
+             ]
+         },
+         {
+             "Effect": "Allow",
+             "Action": [
+                 "kms:Decrypt"
+             ],
+             "Resource": "arn:aws:kms:us-east-1:337078722066:alias/aws/ssm"
+         }
+     ]
+ }
