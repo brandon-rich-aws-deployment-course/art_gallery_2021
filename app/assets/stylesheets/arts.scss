@@ -1,3 +1,57 @@
 // Place all the styles related to the arts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.header {
+
+}
+
+.gallery {
+	height: auto;
+    overflow: auto;
+}
+
+.art{
+	float: left;
+	height: 300px;
+	width: 500px;
+}
+
+.empty_frame {
+	background-color: lightgray;
+	min-height: 200px;	
+	width: 150px;
+}
+
+.frame_holder{
+	height: 100%;
+	float: left;
+}
+
+	.frame {
+		border-style: outset;
+	    border-width: 8px;
+	    border-color: goldenrod;
+	    height: 90%;
+	}
+
+.art_title{
+	font-style: italic;
+}
+
+.info_holder{
+	height: 100%;
+	float: left;
+	.info {
+		position: relative;
+		top: 40%;
+		left: 15px;		
+		background-color: white;
+		padding: 10px;
+		border: thin solid black;
+	}
+}
+
+.shadow{
+	-webkit-box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.55); 
+box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.55);
+}
