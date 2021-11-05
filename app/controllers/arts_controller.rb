@@ -27,8 +27,8 @@ class ArtsController < ApplicationController
 
     respond_to do |format|
       if @art.save
-        format.html { redirect_to @art, notice: "Art was successfully created." }
-        format.json { render :show, status: :created, location: @art }
+        format.html { redirect_to arts_url, notice: "Art was successfully added." }        
+        format.json { render :index, status: :created, location: @art }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @art.errors, status: :unprocessable_entity }
