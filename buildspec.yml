@@ -1,0 +1,23 @@
+version: 0.2
+
+env:
+  variables:
+    foo: "bar"
+    RAILS_ENV: "test"
+
+phases:
+  install:
+    commands:
+      - echo Bundle install...
+      - bundle install
+      - bundle exec rake db:migrate
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Ruby code...
+      - bundle exec rspec 
+    finally:
+      - echo "Finally block of build phase reached.  this executes even if the commands in this phase error out."
+  post_build:
+    commands:
+      - echo Build completed on `date`

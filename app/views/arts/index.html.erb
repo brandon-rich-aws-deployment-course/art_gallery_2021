@@ -1,37 +1,49 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Art Gallery</h1>
+<h1 class="header">Art Gallery</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Artist</th>
-      <th>Year</th>
-      <th>Image url</th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
+<div class="gallery">
+  <% if @arts.length == 0 %>
+    <div class="empty">
+
+      <div class="empty_frame frame shadow">
+        &nbsp;
+      </div>
+
+      <div>
+        <br/>
+        The gallery is empty!  <%= link_to  'Add a work', new_art_path %> to get started.
+      </div>
+    </div>
+  <% else %>
     <% @arts.each do |art| %>
-      <tr>
-        <td><%= art.title %></td>
-        <td><%= art.description %></td>
-        <td><%= art.artist %></td>
-        <td><%= art.year %></td>
-        <td><%= link_to image_tag(art.image_url, width:"100px"), art %></td>
-        <td><%= link_to 'Show', art %><br/>
-        <%= link_to 'Edit', edit_art_path(art) %><br/>
-        <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="art">
+        <div class="frame_holder">
+          <%= image_tag(art.image_url, class:"frame shadow") %>
+        </div>
+        <div class="info_holder">
+          <div class="info shadow">
+            <div class="art_title"><%= art.title %></div>
+            <div><%= art.artist %></div>
+            <div><%= art.year %></div>
+            <%= link_to 'Delete', art, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      </div>    
+    <% end %> 
+  <% end %>
+</div>
 
-<br>
+<% if @arts.length != 0 %>
+  <div>
+    <%= link_to  'Add to Your Collection', new_art_path %>
+  </div> 
+<% end %>
 
-<%= link_to  'New Art', new_art_path %>
+
+<div>
 <br/>
-
+Hostname: <%= @hostname %>
+</div>
