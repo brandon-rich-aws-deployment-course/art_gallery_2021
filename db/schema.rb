@@ -12,33 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2021_11_02_150900) do
 
-  create_table "albums", force: :cascade do |t|
-    t.string "album_title"
-    t.string "artist"
-    t.string "year_released"
-    t.string "cover_image_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "arts", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.string "artist"
     t.string "year"
     t.string "image_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "books", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
