@@ -21,6 +21,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
+Add RAIL_MASTER_KEY
+eb setenv RAILS_MASTER_KEY=00ef7b7a564b9df1ce2f302ac0ef362f -e development-art-gallery
 * ...
 
 v0912
