@@ -37,7 +37,7 @@ export RDS_USERNAME=$(aws ssm get-parameters --region us-east-1 --names CodeDepl
 export RDS_HOSTNAME=$(aws ssm get-parameters --region us-east-1 --names CodeDeployPostgresEndpoint --with-decryption --query Parameters[0].Value)
 
 echo "DEBUG: Generating a secret key base value"
-#export SECRET_KEY_BASE=$(bundle exec rake secret)
+##export SECRET_KEY_BASE=$(bundle exec rake secret)
 export SECRET_KEY_BASE="30ab766bb94de4eb247ebf516bfd08b4141e16767de0fa8356ea117c33747999ac6055c6d9253f9ef7aa6f26a7365c11a41e47dceff85bc799d9e6a2ad7048ff"
 
 
