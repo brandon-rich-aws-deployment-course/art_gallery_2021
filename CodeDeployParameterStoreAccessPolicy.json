@@ -14,7 +14,7 @@
                  "ssm:GetParameters"
              ],
              "Resource": [
-                 "arn:aws:ssm:us-east-1:337078722066:parameter/CodeDeploy*"
+                 "arn:aws:ssm:us-east-1:678020273738:parameter/CodeDeploy*"
              ]
          },
          {
@@ -22,7 +22,7 @@
              "Action": [
                  "kms:Decrypt"
              ],
-             "Resource": "arn:aws:kms:us-east-1:337078722066:alias/aws/ssm"
+             "Resource": "arn:aws:kms:us-east-1:678020273738:alias/aws/ssm"
          }
      ]
  }
